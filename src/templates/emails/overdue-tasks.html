@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .header {
+        color: #e63946;
+        font-size: 24px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      .task-info {
+        background: #f8f9fa;
+        padding: 15px;
+        border-radius: 5px;
+      }
+      .footer {
+        margin-top: 30px;
+        font-size: 14px;
+        color: #666;
+        border-top: 1px solid #eee;
+        padding-top: 20px;
+      }
+      .integration-info {
+        margin-top: 15px;
+        padding: 10px;
+        background: #f0f0f0;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 12px;
+      }
+      a {
+        color: #2557a7;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">⚠️ Overdue Task Alert</div>
+
+      <p>Hi {{assigneeName}},</p>
+
+      <p>
+        This is a friendly reminder that you have an overdue task that requires
+        your attention.
+      </p>
+
+      <div class="task-info">
+        <p><strong>Task:</strong> {{taskName}}</p>
+        <p><strong>Due Date:</strong> {{dueDate}}</p>
+        <p><strong>Status:</strong> {{status}}</p>
+      </div>
+
+      <p>Please update the task status in Notion when you can.</p>
+      <p>
+        <a href="{{workspaceUrl}}">View Task in Notion</a>
+      </p>
+
+      <div class="footer">
+        <p>Best regards,<br />Your Notion Bot</p>
+        <div class="integration-info">
+          <p>
+            <strong>Want to integrate this bot into your workspace?</strong>
+          </p>
+          <p>
+            📧 Email us:
+            <a href="mailto:kachieosuji11@gmail.com">support@notionbot.com</a
+            ><br />
+            📞 Call us: +234 903 748 4346<br />
+            🌐 Visit:
+            <a href="https://notionbot.com/integrate"
+              >https://notionbot.com/integrate</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
