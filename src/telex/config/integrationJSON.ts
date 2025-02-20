@@ -14,7 +14,7 @@ export const integrationJSON = (req: Request, res: Response) => {
         "app_name": "Notion Updates",
         "app_description": "Checks the Notion board at regular intervals to gather updates on task statuses,  send a summary of completed tasks, tasks that are overdue, and upcoming deadlines.  If a task has been stuck in a specific column (e.g., \"In Progress\") for too long, the bot can notify the assigned team member via telex ad also send an email",
         "app_logo": "https://res.cloudinary.com/dwvwvluhs/image/upload/v1739926444/telexandnotion_zpvl9g.png",
-        "app_url": "https://telex-notion-integration.onrender.com",
+        "app_url": `${hostUrl}`,
         "background_color": "#fff"
       },
       "is_active": true,
