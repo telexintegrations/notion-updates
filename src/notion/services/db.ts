@@ -1,13 +1,18 @@
 import axios from "axios";
 import { DateProperty, ExtractedTask, NotionResponse, PeopleProperty, SelectProperty, StatusProperty, TitleProperty } from "../types";
 
-const baseUrl = process.env.NOTION_BASE_URL
-const databaseId = process.env.NOTION_DATABASE_ID
-
 export const getDatabaseData = async (): Promise<ExtractedTask[]> => {
+    const baseUrl = process.env.NOTION_BASE_URL;
+    const databaseId = process.env.NOTION_DATABASE_ID;
+    const apiKey = process.env.NOTION_API_KEY;
+
+    if (!baseUrl || !databaseId || !apiKey) {
+        throw new Error('Missing required environment variables: NOTION_BASE_URL or NOTION_DATABASE_ID');
+    }
+
     const response = await axios.post<NotionResponse>(`${baseUrl}/databases/${databaseId}/query`, {}, {
         headers: {
-            'Authorization': `Bearer ${process.env.NOTION_API_KEY}`,
+            'Authorization': `Bearer ${apiKey}`,
             'Content-Type': 'application/json',
             'Notion-Version': '2022-06-28'
         }

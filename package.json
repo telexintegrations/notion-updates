@@ -7,7 +7,22 @@
     "start": "npm run build && node dist/index.js",
     "build": "tsc",
     "dev": "nodemon --exec ts-node src/index.ts",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:verbose": "jest --verbose"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1"
+    },
+    "testMatch": ["**/__tests__/**/*.test.ts"],
+    "moduleFileExtensions": ["ts", "js", "json"],
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    }
   },
   "keywords": [],
   "author": "",
