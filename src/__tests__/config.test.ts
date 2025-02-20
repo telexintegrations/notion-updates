@@ -1,5 +1,5 @@
 import { validateConfig } from '../global/config';
-import { afterAll, beforeEach, describe, expect, it, jest } from '@jest/globals';
+import { afterAll, beforeEach, describe, expect, it } from '@jest/globals';
 
 
 describe('Environment Configuration', () => {
