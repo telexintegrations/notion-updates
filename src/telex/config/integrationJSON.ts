@@ -30,7 +30,7 @@ export const integrationJSON = (req: Request, res: Response) => {
           "label": "interval",
           "type": "text",
           "required": true,
-          "default": "0 9 * * *"
+          "default": "*/2 * * * *"
         },
         {
           "label": "Do you want to continue",
